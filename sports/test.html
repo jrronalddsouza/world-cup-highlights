@@ -44,10 +44,8 @@
 <!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.3.3/video-js.css" rel="stylesheet" />
 
-<link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
-<link href="dist/videojs-seek-buttons.css" rel="stylesheet">
+
 
                <!-- BEGIN SHAREAHOLIC CODE -->
 <link rel="preload" href="https://platform-api.sharethis.com/js" as="script" />
@@ -177,104 +175,16 @@ box-shadow: 0px 0px 15px 15px #0e0d0d;
     </nav>
 </div>
       </header>
-      <style>
-        /* video container */
-.videoContainer {
-max-width: 300px;
-position: relative;
-margin: 20px auto 0;
-}
-.advertisement{
-position:absolute;
-color: rgb(230, 200, 98);
-padding: 5px 10px;
-text-align: right;
-background: rgba(0, 0, 0, 0.4);
-bottom: 60px;
-right:0;
-font-size: 14px;
-font-weight: 700;
-z-index: 1 !important;
-}
-.hide{
-display:none;
-}
-        </style>
-      <script>
-        $(document).ready(function(){
-          var videotag = $('.playads');
-              var myPlayer = videojs('video_1');
-        $(".moveToVideoJs").appendTo($('#video_1'));
-              // show advertisement label while play advertisement
-              myPlayer.on('play', function() {
-                    if(myPlayer.hasClass("playads")){
-                        $('.advertisement').removeClass('hide');
-                  }
-              });
-              // Stop from seeking while playing advertisement
-              myPlayer.on("seeking", function(event) {
-                    if (currentTime < myPlayer.currentTime() && myPlayer.hasClass("playads")) {
-                      myPlayer.currentTime(currentTime);
-                    }
-              });
-              myPlayer.on("seeked", function(event) {
-                    if (currentTime < myPlayer.currentTime() && myPlayer.hasClass("playads")) {
-                      myPlayer.currentTime(currentTime);
-                    }
-              });
-              setInterval(function() {
-                    if (!myPlayer.paused() && myPlayer.hasClass("playads")) {
-                      currentTime = myPlayer.currentTime();
-                    }
-              }, 1000);
-              
-              // Hide Advertisement label and change data-src of player to play actual video
-              myPlayer.on('ended', function() {
-                    if(this.hasClass("playads")){
-                this.src({type: videotag.attr('mimetype'), src: videotag.attr('video-url')});
-                        this.play();
-                        this.removeClass('playads');
-                        $('.advertisement').addClass('hide');
-                  }
-              });
-      });
-      </script>
-   <style>
-    .video-js {
-      border-style: double;
-      border-width: thick;
-      border-color: blue;
-      border-radius: 15px;
-      box-shadow: 0px 0px 15px 15px #0e0d0d; 
-    }
-
-    video[poster]{
-    object-fit: cover;
-  }
-  .vjs-poster {
-    background-size: cover;
-    background-position: inherit;
-  }
-
-
-  </style>
- 
-      <div class="container-fluid video-blog">
+      
+       <div class="container-fluid video-blog">
         <div class="container">
-             <div class="row">
-            
-                                 
-                 <!-- Add some extra attribute as video-url and mimetype which we can later play once we are done playing ads  -->
-                
-                  <video id="video_1" class="video-js playads" class="video-js vjs-default-skin " height="400" width="650" video-url="https://raw.githubusercontent.com/groupincworld/m3u8/main/qatvsecu/master.m3u8" mimetype="application/x-mpegURL"  controls  preload="none" controlsList="nodownload" poster='/img/2022/Qatar v Ecuador.webp' data-setup='{ "fluid" : true }'  >
-                             <source src="/video/dove.mp4" type='video/mp4' >                         
-                              </video>    
-  
-                            
-                                 <!-- text to be displayed while playing ad   -->
-                            <div class="moveToVideoJs">
-                                <div class="advertisement hide">Advertisement</div>
-                              </div>  </div> 
+            <div class="row">
+                <div class="videoContainer">
+                    <div class="col-md-8">
+                    </div></div></div>
+                  
+                                      
+                          
                            <p></p>    </br>          
 <span style="color: blue; font-family: Play; font-size: 18px;"><i class='fas fa-futbol'></i>    
     Argentina v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™ | Highlights
@@ -334,12 +244,6 @@ display:none;
                                            
                                           
                                       
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
  
       <!-- Footer Start -->
       <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
