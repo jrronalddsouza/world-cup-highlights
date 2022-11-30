@@ -32,19 +32,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://fifaworldcup-highlights.netlify.app/favicon-16x16.png">
     <link rel="favicon" type="image/png" href="https://fifaworldcup-highlights.netlify.app/favicon.ico">
 
-    <script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
-<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
 
-<!-- unpkg : use a specific version of Video.js (change the version numbers as necessary) -->
-<link href="https://unpkg.com/video.js@7.10.2/dist/video-js.min.css" rel="stylesheet">
-<script src="https://unpkg.com/video.js@7.10.2/dist/video.min.js"></script>
 
-<!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
-
+    
+    
+    
 
 
                <!-- BEGIN SHAREAHOLIC CODE -->
@@ -181,9 +173,33 @@ box-shadow: 0px 0px 15px 15px #0e0d0d;
             <div class="row">
                 <div class="videoContainer">
                     <div class="col-md-8">
-                    </div></div></div>
+                        <script src="video.js"></script>
+<script src="videojs.ads.js"></script>
+<script src="videojs-preroll.js"></script>
+<link href="video-js.css" rel="stylesheet" type="text/css">
+<link href="video.ads.css" rel="stylesheet" type="text/css">
+<link href="videojs-preroll.css" rel="stylesheet" type="text/css">
+                        <video id="example_video_1" class="video-js vjs-default-skin" controls width="640" height="264" preload="auto">
+                            <source src="video/highlights.mp4" type='video/mp4' />
+                           
+                          </video>
+                          <script>
+                          videojs('example_video_1', {}, function(){
+                            var player = this;
+                            player.preroll({
+                              src:"video/dove.mp4"
+                            });
+                          });
+                          </script>
                   
-                                      
+                   <script>
+                    {
+    'skip':'Skip',
+    'skip in': 'Skip in ',
+    'advertisement': 'Advertisement',
+    'video start in': 'Video will start in: '
+}
+                   </script>                   
                           
                            <p></p>    </br>          
 <span style="color: blue; font-family: Play; font-size: 18px;"><i class='fas fa-futbol'></i>    
