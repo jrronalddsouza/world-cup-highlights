@@ -13,7 +13,7 @@
 			<Duration>00:00:20</Duration>
 			<MediaFiles>
 			    <MediaFile delivery="progressive" type="video/mp4" scalable="true" width="" height="">
-				<![CDATA[../video/dr-trailer.mp4]]>
+				<![CDATA[https://sportshighlights.netlify.app/video/dr-trailer.mp4]]>
 			    </MediaFile>
 			    <MediaFile delivery="progressive" type="video/webm" scalable="true" width="" height="">
 				<![CDATA[../static/pepsi_vs_coca.webm]]>
@@ -64,7 +64,7 @@
 			<Duration>00:00:32</Duration>
 			<MediaFiles>
 			    <MediaFile delivery="progressive" type="video/mp4" scalable="true" width="" height="">
-				<![CDATA[../video/Weightlifting.mp4]]>
+				<![CDATA[https://sportshighlights.netlify.app/video/Weightlifting.mp4]]>
 			    </MediaFile>
 			    <MediaFile delivery="progressive" type="video/webm" scalable="true" width="" height="">
 				<![CDATA[../static/pepsi_vs_coca.webm]]>
@@ -115,7 +115,7 @@
 			<Duration>00:00:30</Duration>
 			<MediaFiles>
 			    <MediaFile delivery="progressive" type="video/mp4" scalable="true" width="" height="">
-				<![CDATA[../static/pepsi_vs_coca.mp4]]>
+				<![CDATA[https://sportshighlights.netlify.app/video/daburred.mp4]]>
 			    </MediaFile>
 			    <MediaFile delivery="progressive" type="video/webm" scalable="true" width="" height="">
 				<![CDATA[../static/pepsi_vs_coca.webm]]>
