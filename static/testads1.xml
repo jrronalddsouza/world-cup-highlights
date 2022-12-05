@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE VAST [
+  <!ATTLIST Ad    id    ID     #IMPLIED>
+	<!ELEMENT MediaFiles (#PCDATA)>
+	<!ELEMENT MediaFile (#PCDATA)>
+	<!ELEMENT URL (#PCDATA)>
+]>
+
+<VAST version="2.0" >
+<Ad id="pre-roll-0">
+<InLine>
+<AdSystem>2.0</AdSystem>
+<AdTitle>Sample</AdTitle>
+<Impression></Impression>
+<Creatives>
+<Creative sequence="1" id="2" >
+<Linear>
+<Duration>00:0:20</Duration>
+<AdParameters>
+</AdParameters>
+<MediaFiles>
+<MediaFile delivery="progressive" bitrate="400" type="video/mp4">
+<URL>/video/dr-trailer.mp4</URL>
+<VideoClicks>
+			    <ClickThrough>
+			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
+			    </ClickThrough>
+			    <ClickTracking>
+				<![CDATA[#]]>
+			    </ClickTracking>
+			</VideoClicks>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+<Ad id="post-roll-0">
+<InLine>
+<AdSystem>2.0</AdSystem>
+<AdTitle>Sample</AdTitle>
+<Impression></Impression>
+<Creatives>
+<Creative sequence="1" id="2" >
+<Linear>
+<Duration>00:00:32</Duration>
+<AdParameters>
+</AdParameters>
+<MediaFiles>
+<MediaFile delivery="progressive" bitrate="400" type="video/mp4">
+<URL>/video/Weightlifting.mp4</URL>
+<VideoClicks>
+			    <ClickThrough>
+			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
+			    </ClickThrough>
+			    <ClickTracking>
+				<![CDATA[#]]>
+			    </ClickTracking>
+			</VideoClicks>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+<Ad id="mid-roll-0">
+<InLine>
+<AdSystem>2.0</AdSystem>
+<AdTitle>Sample</AdTitle>
+<Impression></Impression>
+<Creatives>
+<Creative sequence="1" id="2" >
+<Linear>
+<Duration>00:00:32</Duration>
+<AdParameters>
+</AdParameters>
+<MediaFiles>
+<MediaFile delivery="progressive" bitrate="400" type="video/mp4">
+<URL>/video/daburred.mp4</URL>
+<VideoClicks>
+			    <ClickThrough>
+			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
+			    </ClickThrough>
+			    <ClickTracking>
+				<![CDATA[#]]>
+			    </ClickTracking>
+			</VideoClicks>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
+</VAST>
