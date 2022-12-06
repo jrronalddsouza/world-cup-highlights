@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://fifaworldcup-highlights.netlify.app//sitemap.xml
+Sitemap: https://sportshighlights.netlify.app/sitemap.xml
