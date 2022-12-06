@@ -53,8 +53,8 @@
     </Ad>
     <Ad id="2">
 	<InLine>
-	    <AdSystem></AdSystem>
-	    <AdTitle></AdTitle>
+	    <AdSystem> sportshighlights </AdSystem>
+	    <AdTitle>youtube</AdTitle>
 	    <Impression>
 	         <![CDATA[../static/clear_dot.gif?impression]]>
 	    </Impression>
