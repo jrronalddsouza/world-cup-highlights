@@ -33,15 +33,6 @@
     <link rel="favicon" type="image/png" href="https://sportshighlights.netlify.app/favicon.ico">
 
 
-<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
-<script src="http://vjs.zencdn.net/c/video.js"></script>
-<!--script src="../plugin/video.3.2.dev.js"></script-->
-
-<link href="../plugin/vast.plugin.css" rel="stylesheet">
-<script src="../plugin/vast.plugin.js"></script>
-
-
-
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -211,53 +202,66 @@ box-shadow: 0px 0px 15px 15px #0e0d0d;
 </head>
 <div class="col-12 col-xl-12">
 <center>
-                  <script>
-                    var vastAd = player.vastClient({
-    adTagXML: requestVASTXML,
-    ...
-});
-
-function requestVASTXML(callback) {
-    //The setTimeout below is to simulate asynchrony
-    setTimeout(function(){
-        callback(null, '<VAST version="3.0"><Ad><Inline>...</Inline></Ad></VAST>');
-    }, 0);
-}
-                  </script>                                             
-    <video id="video" class="video-js vjs-default-skin" controls  poster="/cricket/day2-engvspak.webp"     height="500" width="80%"   preload="auto"  data-setup='{"fluid" : true}'  >    
-<source src="/cricket/1stTestDay2.mp4" type='video/mp4'/>
-
-<script type="text/javascript">
-    var options = {
-    ads: {
-        'skipAd': {
-        'enabled': true,
-        'timeOut': 5
-        },
-        'servers'  : [
-        {
-            'apiAddress': 'https://www.videosprofitnetwork.com/watch.xml?key=fe2066d9a7a54c8a5306f1d610df20d7'
-            //'apiAddress' : 'http://some.domain/xdr-redirect/?http://some.domain/xml/vast.xml', //for xdr only
-            //'xdrMethod': 'yql' //['yql' | 'xdr']
-        }
-        ], 
-        'schedule' : [
-        {
-            'position' : 'pre-roll',
-           
-        },
-      {
-          'position' : 'mid-roll',
-          'startTime': '00:03:30'
-      },
-      {
-          'position' : 'post-roll'
-      }
-      ]
-  }
-  };
-  _V_("video", options);
-</script>
+    <center>
+        <div id="player"></div>
+    
+        <script>
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+    
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          
+          function onYouTubeIframeAPIReady() {
+              player = new YT.Player('player', {
+                  height: '550',
+                  width: '100%',
+                  videoId: 'Uqta2UwqyFk',
+                  playerVars: { 'playsinline': 1,'autoplay': 1, 'mute': 1, 'controls': 1,
+                  playlist: 'Uqta2UwqyFk',
+                  loop: 1
+                }
+              });
+                  }
+          function onPlayerReady(event) {
+                  //  event.target.setLoop(true);
+                  event.target.playVideo();
+                }
+          
+          function onPlayerStateChange(event) {
+              if (event.data == YT.PlayerState.PLAYING) {
+                //player is playing
+              } else {
+                //player is paused
+              }
+          }
+          
+          function stopVideo() {
+              player.stopVideo();
+          }
+          
+          function playVideo() {
+            player.playVideo();
+          }
+          
+          function pauseVideo() {
+            player.pauseVideo();
+          }
+          
+          
+          $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+              playVideo();
+          });
+          
+          $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
+            pauseVideo();
+          });
+          </script>
 </div>
 </br><p></p></br>
 
