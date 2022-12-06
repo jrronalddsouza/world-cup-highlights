@@ -20,7 +20,7 @@
 </AdParameters>
 <MediaFiles>
 <MediaFile delivery="progressive" bitrate="400" type="video/mp4">
-<URL>https://sportshighlights.netlify.app/video/dr-trailer.mp4</URL>
+<URL>video/dr-trailer.mp4</URL>
 <VideoClicks>
 			    <ClickThrough>
 			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
@@ -49,7 +49,7 @@
 </AdParameters>
 <MediaFiles>
 <MediaFile delivery="progressive" bitrate="400" type="video/mp4">
-<URL>https://sportshighlights.netlify.app/video/Weightlifting.mp4</URL>
+<URL>video/Weightlifting.mp4</URL>
 <VideoClicks>
 			    <ClickThrough>
 			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
@@ -78,7 +78,7 @@
 </AdParameters>
 <MediaFiles>
 <MediaFile delivery="progressive" bitrate="400" type="video/mp4">
-<URL>https://sportshighlights.netlify.app/video/daburred.mp4</URL>
+<URL>video/daburred.mp4</URL>
 <VideoClicks>
 			    <ClickThrough>
 			         <![CDATA[http://www.youtube.com/channel/UCqeIpZjSPTvAXhT_-OJt2vA/]]>
