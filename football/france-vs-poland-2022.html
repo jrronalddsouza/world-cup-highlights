@@ -32,7 +32,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://sportshighlights.netlify.app/favicon-16x16.png">
     <link rel="favicon" type="image/png" href="https://sportshighlights.netlify.app/favicon.ico">
 
-
+  <!-- unpkg : use the latest version of Video.js -->
+  <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+  
+  <!-- unpkg : use a specific version of Video.js (change the version numbers as necessary) -->
+  <link href="https://unpkg.com/video.js@7.10.2/dist/video-js.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js@7.10.2/dist/video.min.js"></script>
+  
+  <!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
+  
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -114,25 +125,7 @@ box-shadow: 0px 0px 15px 15px #0e0d0d;
     </style>
     
 </head>
-<style>
-    .video-js {
-      border-style: double;
-      border-width: thick;
-      border-color: blue;
-      border-radius: 15px;
-      box-shadow: 0px 0px 15px 15px #0e0d0d; 
-    }
 
-    video[poster]{
-    object-fit: cover;
-  }
-  .vjs-poster {
-    background-size: cover;
-    background-position: inherit;
-  }
-
-
-  </style>
 <body>
 <!-- Libraries Stylesheet -->
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -202,6 +195,101 @@ box-shadow: 0px 0px 15px 15px #0e0d0d;
 
 </head>
 <div class="col-12 col-xl-12">
+    <style type="text/css">
+        .overlay {
+          width: 100%;
+          background: rgba(0,0,0,.75);
+          position: fixed;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+        }
+        .videoBox {
+          position: fixed;
+          width: 90%;
+          left: 50%;
+          top:50%;
+          transform: translateY(-50%) translateX(-50%);
+          padding: 20px;
+          background: #fff;
+          text-align: center;
+          border-radius: 5px;
+        }
+        .videoBox video {
+          width: 100%;
+        }
+        .close {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          top: -18px;
+          right: -18px;
+          display: block;
+          background: transparent url(images/close.png) no-repeat center center;
+          opacity: .8;
+        }
+        .close:hover {
+          opacity: 1;
+        }
+        @media (min-width: 767px) {
+          .videoBox {
+            width: 50%;
+          }
+        }
+        </style>
+        </head>
+        <body>
+        <div class="wrapper">
+        
+        <div class="overlay">
+          <div class="videoBox" id="videobox">
+            <span style="color: blue; font-family: Play; font-size: 16px;"> Advertisement 
+            <a class="close"> SkipAds</a></span>
+            
+           <!-- <iframe webkitAllowFullScreen mozallowfullscreen allowfullscreen src="https://www.youtube.com/embed/TzPS6ELoZ1I" title="0" byline="0" height="325" width="100%"   portrait="0"  frameborder="0" allow="autoplay" ></iframe>
+            <video id="my-player-id"   class="video-js vjs-default-skin" preload="auto"  controls src="/ads/sports-ads.mp4"></video>-->
+            <video
+    id="my-player"
+    class="video-js"
+    controls
+    autoplay
+    loop    
+    data-setup='{ "fluid" : true}'>
+  <source src="/ads/sports-ads.mp4" type="video/mp4"></source>
+</video>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+      
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+        <script>
+        $(function() {
+          // CLOSE AND REMOVE ON ESC
+          $(document).on('keyup',function(e) {
+            if (e.keyCode == 27) {
+              $('.overlay').remove();
+            }
+          });
+          
+          // CLOSE AND REMOVE ON CLICK
+          $('body').on('click','.overlay, .close', function() {
+            $('.overlay').remove();
+          });
+          
+          // SO PLAYING WITH THE VIDEO CONTROLS DOES NOT
+          // CLOSE THE POPUP
+          $('body').on('click','.videoBox', function(e) {
+            e.stopPropagation();
+          });
+        });
+       
+           
+       </script>
 <center>
     <div id="player"></div>
 
